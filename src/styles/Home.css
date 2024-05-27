@@ -1,0 +1,35 @@
+.floating-image-container {
+    position: relative;
+  }
+    
+  .floating-image-upwards {
+    position: absolute;
+    animation: floatUpAnimation 1s infinite alternate cubic-bezier(0.5, 0.05, 0.5, 0.95);
+  }
+  
+  .floating-image-downwards {
+    position: absolute;
+    animation: floatDownAnimation 1s infinite alternate cubic-bezier(0.5, 0.05, 0.5, 0.95);
+  }
+  
+  .description {
+    font-family: "Garaje-0703";
+  }
+  
+  @keyframes floatUpAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes floatDownAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(20px); 
+    }
+  }

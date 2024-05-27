@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Garaje-0703";
+  src: local("Garaje"),
+   url("./fonts/Garaje.ttf") format("truetype");
+  font-weight: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Garaje0504";
+  src: local("Garaje 0504 VAR"),
+   url("./fonts/Garaje0504.ttf") format("truetype");
+  font-weight: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app {
+  font-family: "Garaje-0703";
+}
+
+.button-base {
+  background-color: #8EEE00;
+  padding: 10px;
+  font-family: "Garaje-0703";
+  font-weight: bold;
+
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.border-base {
+  border: 2px solid;
+  border-bottom: 6px solid;
+  border-right: 6px solid;
+  border-radius: 8px;
+}
+
+.button-base:hover{
+  border: 2px solid #5551ff;
+  border-bottom: 5px solid #5551ff;
+  border-right: 5px solid #5551ff;  
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.3s;
+}
+
+.button-arrow {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  transition: top 0.3s;
+}
+
+.button-base:hover .button-text{
+  animation: fallAndReturn 0.5s forwards;
+}
+
+@keyframes fallAndReturn {
+  0% {
+    top: 50%;
+    opacity: 1;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  50% {
+    top: 100%;
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  51% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
   }
 }

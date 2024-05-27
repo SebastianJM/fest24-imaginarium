@@ -1,0 +1,49 @@
+.ribon {
+    position:absolute;
+    z-index: 9999;
+    top:15vh;
+    left:-20vw;
+    display: block;
+    box-sizing:border-box;
+    background: #8EEE00; 
+    height:55px;
+    width:65vw;                      
+    transform: rotate(-25deg);
+    padding-top: 10px;
+  }
+  
+  .ribon-text {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+    color: black;
+    position: absolute;
+    white-space: nowrap;
+    animation: move-sentence 5s linear infinite; /* Adjust duration as needed */
+    
+  }
+  
+  @keyframes move-sentence {
+    from {
+      transform: translateX(80vw); /* Start from 100% width offset (off-screen to the right) */
+    }
+    to {
+      transform: translateX(-10vw); /* End at 0% offset (normal position) */
+    }
+  }
+
+  @keyframes mover {
+    from {
+      left: 100%;
+    }
+    to {
+      left: -100%;
+    }
+  }
+
+  .title-area {
+    
+  }
+  
